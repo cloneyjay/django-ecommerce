@@ -1,0 +1,20 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+{% include 'store/navbar.html' %}
+<div>
+    <br><br><br>
+    <center>
+        <div class="col-md-6">
+            <h1>REGISTER</h1>
+            <form method="POST" action="{% url 'store:register' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <br> <br>
+                <button type="submit" class="btn btn secondary">Register</button>
+            </form>
+        </div>
+    </center>
+       <br><br><br>
+</div>
+{% endblock %}
